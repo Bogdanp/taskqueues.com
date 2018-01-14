@@ -1,0 +1,309 @@
+brokers:
+  - name: Amazon SQS
+    homepage: https://aws.amazon.com/sqs/
+    summary: |
+      Amazon Simple Queue Service (SQS) is a fully managed message
+      queuing service that makes it easy to decouple and scale
+      microservices, distributed systems, and serverless
+      applications. Building applications from individual components
+      that each perform a discrete function improves scalability and
+      reliability, and is best practice design for modern
+      applications.
+
+  - name: Apache Kafka
+    homepage: http://kafka.apache.org/
+    summary: |
+      Kafka® is used for building real-time data pipelines and
+      streaming apps. It is horizontally scalable, fault-tolerant,
+      wicked fast, and runs in production in thousands of companies.
+
+  - name: Apache Qpid
+    homepage: http://qpid.apache.org/
+    summary: |
+      Apache Qpid™ makes messaging tools that speak AMQP and support
+      many languages and platforms.
+
+  - name: Apache Pulsar
+    homepage: http://pulsar.incubator.apache.org/
+    summary: |
+      Apache Pulsar is an open-source distributed pub-sub messaging
+      system originally created at Yahoo and now part of the Apache
+      Software Foundation.
+
+  - name: Apache RocketMQ
+    homepage: https://rocketmq.apache.org/
+    summary: |
+      Apache RocketMQ™ is an open source distributed messaging and
+      streaming data platform.
+
+  - name: Azure Service Bus
+    homepage: https://azure.microsoft.com/en-us/services/service-bus/
+    summary: |
+      Depend on Azure Service Bus when you need highly-reliable cloud
+      messaging service between applications and services, even when
+      one or more is offline.
+
+  - name: Beanstalk
+    homepage: http://kr.github.io/beanstalkd/
+    summary: |
+      Beanstalk is a simple, fast work queue.  Its interface is
+      generic, but was originally designed for reducing the latency of
+      page views in high-volume web applications by running
+      time-consuming tasks asynchronously.
+
+  - name: Faktory
+    homepage: http://contribsys.com/faktory/
+    summary: |
+      At a high level, Faktory is a work server. It is the repository
+      for background jobs within your application. Jobs have a type
+      and a set of arguments and are placed into queues for workers to
+      fetch and execute.
+
+  - name: Gearman
+    homepage: http://gearman.org/
+    summary: |
+      Gearman provides a generic application framework to farm out
+      work to other machines or processes that are better suited to do
+      the work. It allows you to do work in parallel, to load balance
+      processing, and to call functions between languages. It can be
+      used in a variety of applications, from high-availability web
+      sites to the transport of database replication events. In other
+      words, it is the nervous system for how distributed processing
+      communicates.
+
+  - name: Google Cloud PubSub
+    homepage: https://cloud.google.com/pubsub/docs/
+    summary: |
+      Google Cloud Pub/Sub is a fully-managed real-time messaging
+      service that allows you to send and receive messages between
+      independent applications.
+
+  - name: IronMQ
+    homepage: http://www.iron.io/mq
+    summary: |
+      MQ provides a reliable way to communicate between services and
+      components. Highly available, persistent by design, with
+      best-effort one-time delivery, MQ is the most industrial
+      strength, cloud-native solution for modern application
+      architecture.
+
+  - name: RabbitMQ
+    homepage: http://rabbitmq.com/
+    summary: |
+      RabbitMQ is lightweight and easy to deploy on premises and in
+      the cloud. It supports multiple messaging protocols. RabbitMQ
+      can be deployed in distributed and federated configurations to
+      meet high-scale, high-availability requirements.
+
+  - name: Redis
+    homepage: https://redis.io
+    summary: |
+      Redis is an open source (BSD licensed), in-memory data structure
+      store, used as a database, cache and message broker.
+
+libraries:
+  - name: Bee Queue
+    homepage: https://github.com/bee-queue/bee-queue
+    summary: |
+      A simple, fast, robust job/task queue for Node.js, backed by Redis.
+    languages:
+      - Node.js
+    brokers:
+      - Redis
+    setup:
+      - npm install --save bee-queue
+
+  - name: Celery
+    homepage: http://celeryproject.org/
+    summary: |
+      Celery is an asynchronous task queue/job queue based on
+      distributed message passing. It is focused on real-time
+      operation, but supports scheduling as well.
+    languages:
+      - Python
+      - PyPy
+    brokers:
+      - Amazon SQS
+      - RabbitMQ
+      - Redis
+    setup:
+      - pipenv install celery
+
+  - name: Delayed::Job
+    homepage: https://github.com/collectiveidea/delayed_job
+    summary: |
+      Delayed::Job (or DJ) encapsulates the common pattern of
+      asynchronously executing longer tasks in the background.
+    languages:
+      - Ruby
+    brokers:
+      - Redis
+    setup:
+      - gem 'delayed_job_active_record' >> Gemfile
+      - bundle install
+
+  - name: Dramatiq
+    homepage: https://dramatiq.io
+    summary: |
+      Dramatiq is an alternative to Celery with a focus on simplicity,
+      reliability and performance.
+    languages:
+      - Python
+      - PyPy
+    brokers:
+      - Memory
+      - RabbitMQ
+      - Redis
+    setup:
+      - pipenv install dramatiq
+
+  - name: exq
+    homepage: https://github.com/akira/exq
+    summary: |
+      Exq is a job processing library compatible with Resque / Sidekiq
+      for the Elixir language.
+    languages:
+      - Elixir
+    brokers:
+      - Redis
+
+  - name: huey
+    homepage: https://huey.readthedocs.io/en/latest/
+    summary: |
+      A lightweight alternative.
+    languages:
+      - Python
+    brokers:
+      - Redis
+    setup:
+      - pipenv install huey
+
+  - name: Kue
+    homepage: http://automattic.github.io/kue/
+    summary: |
+      Kue is a feature rich priority job queue for node.js backed by
+      redis. A key feature of Kue is its clean user-interface for
+      viewing and managing queued, active, failed, and completed jobs.
+    languages:
+      - Node.js
+    brokers:
+      - Redis
+    setup:
+      - npm install --save kue
+
+  - name: Laravel
+    homepage: https://laravel.com/docs/5.5/queues
+    summary: |
+      Laravel queues provide a unified API across a variety of
+      different queue backends, such as Beanstalk, Amazon SQS, Redis,
+      or even a relational database. Queues allow you to defer the
+      processing of a time consuming task, such as sending an email,
+      until a later time. Deferring these time consuming tasks
+      drastically speeds up web requests to your application.
+    languages:
+      - PHP
+    brokers:
+      - Amazon SQS
+      - Beanstalk
+      - Database
+      - Redis
+    setup:
+      - composer global require "laravel/installer"
+
+  - name: Machinery
+    homepage: https://github.com/RichardKnop/machinery
+    summary: |
+      Machinery is an asynchronous task queue/job queue based on
+      distributed message passing.
+    languages:
+      - Go
+    brokers:
+      - Amazon SQS
+      - RabbitMQ
+      - Redis
+    setup:
+      - go get github.com/RichardKnop/machinery/v1
+
+  - name: MassTransit
+    homepage: http://masstransit-project.com/
+    summary: |
+      MassTransit is a free, open source, lightweight message bus for
+      creating distributed applications using the .NET framework.
+      MassTransit provides an extensive set of features on top
+      existing message transports, resulting in a developer friendly
+      way to asynchronously connect services using message-based
+      conversation patterns.  Message-based communication is a
+      reliable and scalable way to implement a service oriented
+      architecture.
+    languages:
+      - .Net
+    brokers:
+      - Azure Service Bus
+      - RabbitMQ
+    setup:
+      - nuget Install-Package MassTransit
+
+  - name: RQ
+    homepage: http://python-rq.org/
+    summary: |
+      RQ (Redis Queue) is a simple Python library for queueing jobs
+      and processing them in the background with workers. It is backed
+      by Redis and it is designed to have a low barrier to entry. It
+      can be integrated in your web stack easily.
+    languages:
+      - Python
+    brokers:
+      - Redis
+    setup:
+      - pipenv install rq
+
+  - name: Resque
+    homepage: https://github.com/resque/resque
+    summary: |
+      Resque is a Redis-backed Ruby library for creating background
+      jobs, placing them on multiple queues, and processing them
+      later.
+    languages:
+      - Ruby
+    brokers:
+      - Redis
+    setup:
+      - echo "gem 'resque'" >> Gemfile
+      - bundle install
+
+  - name: rethinkdb-job-queue
+    homepage: https://github.com/grantcarthew/node-rethinkdb-job-queue
+    summary: |
+      rethinkdb-job-queue is a persistent job or task queue backed by
+      RethinkDB. It has been built as an alternative to the many
+      queues available on NPM.
+    languages:
+      - Node.js
+    brokers:
+      - RethinkDB
+    setup:
+      - npm install --save rethinkdb-job-queue
+
+  - name: Sidekiq
+    homepage: http://sidekiq.org/
+    summary: |
+      Sidekiq is a full-featured background processing framework for
+      Ruby. It aims to be simple to integrate with any modern Rails
+      application and much higher performance than other existing
+      solutions.
+    languages:
+      - Ruby
+    brokers:
+      - Redis
+    setup:
+      - echo "gem 'sidekiq'" >> Gemfile
+      - bundle install
+
+  - name: Sidekiq.cr
+    homepage: https://github.com/mperham/sidekiq.cr
+    summary: |
+      A version of Sidekiq for the Crystal language.
+    languages:
+      - Crystal
+    brokers:
+      - Redis
