@@ -7,7 +7,7 @@ A list of task queue libraries.
 
 ### Setup
 
-Run `[pipenv] install --dev` to install the dev dependencies.
+Run `pipenv install --dev` to install the dev dependencies.
 
 ### Building
 
@@ -26,5 +26,4 @@ taskqueues is licensed under Apache 2.0.  Please see
 [LICENSE][license] for licensing details.
 
 
-[pipenv]: https://docs.pipenv.org
 [license]: https://github.com/Bogdanp/taskqueues.com/blob/master/LICENSE
