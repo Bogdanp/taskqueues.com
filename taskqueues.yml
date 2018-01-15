@@ -287,6 +287,25 @@ libraries:
     setup:
       - npm install --save rethinkdb-job-queue
 
+  - name: queue_classic
+    homepage: https://github.com/QueueClassic/queue_classic
+    summary: |
+      queue_classic provides a simple interface to a PostgreSQL-backed
+      message queue. queue_classic specializes in concurrent locking and
+      minimizing database load while providing a simple, intuitive 
+      developer experience. queue_classic assumes that you are already 
+      using PostgreSQL in your production environment and that adding 
+      another dependency (e.g. redis, beanstalkd, 0mq) is undesirable.
+    languages:
+      - Ruby
+    brokers:
+      - PostgreSQL
+    setup:
+      - echo "gem 'queue_classic'" >> Gemfile
+      - bundle install
+      - export QC_DATABASE_URL="postgres://username:password@localhost/your_database"
+      - ruby -r queue_classic -e "QC::Setup.create"
+
   - name: RQ
     homepage: http://python-rq.org/
     summary: |
