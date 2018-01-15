@@ -24,6 +24,11 @@
       h1, h2, h3 { font-weight: 300; }
       h1 { font-size: 2.5rem; }
 
+      pre {
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        font-size: 0.8rem;
+      }
+
       .container {
         width: 960px;
         margin: 0 auto;
@@ -129,6 +134,23 @@
       .footer .container {
         border-top: 1px solid #eee;
         padding: 1rem 0;
+      }
+
+      @media(max-width: 1024px) { /* 960 + 64 */
+        .container {
+          width: auto;
+          margin: 0 32px;
+        }
+      }
+
+      @media(max-width: 407px) { /* 375 + 32 */
+        .container {
+          margin: 0 16px;
+        }
+
+        .hero h2 {
+          width: auto;
+        }
       }
     </style>
   </head>
