@@ -87,6 +87,16 @@ brokers:
       strength, cloud-native solution for modern application
       architecture.
 
+  - name: NATS
+    homepage: https://nats.io/
+    summary: |
+      NATS is an open source, lightweight, high-performance cloud
+      native infrastructure messaging system. It implements a highly
+      scalable and elegant publish-subscribe (pub/sub) distribution
+      model. The performant nature of NATS make it an ideal base for
+      building modern, reliable, scalable cloud native distributed
+      systems.
+
   - name: RabbitMQ
     homepage: http://rabbitmq.com/
     summary: |
