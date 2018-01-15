@@ -176,6 +176,16 @@ libraries:
       - Elixir
     brokers:
       - Redis
+    setup:
+      - |
+        echo >mix.exs <<EOF
+        defp deps do
+          [
+            {:exq, "~> 0.9.1"}
+          ]
+        end
+        EOF
+      - mix deps.get
 
   - name: huey
     homepage: https://huey.readthedocs.io/en/latest/
@@ -253,6 +263,19 @@ libraries:
     setup:
       - nuget Install-Package MassTransit
 
+  - name: node-rethinkdb-job-queue
+    homepage: https://github.com/grantcarthew/node-rethinkdb-job-queue
+    summary: |
+      rethinkdb-job-queue is a persistent job or task queue backed by
+      RethinkDB. It has been built as an alternative to the many
+      queues available on NPM.
+    languages:
+      - Node.js
+    brokers:
+      - RethinkDB
+    setup:
+      - npm install --save rethinkdb-job-queue
+
   - name: RQ
     homepage: http://python-rq.org/
     summary: |
@@ -281,19 +304,6 @@ libraries:
       - echo "gem 'resque'" >> Gemfile
       - bundle install
 
-  - name: rethinkdb-job-queue
-    homepage: https://github.com/grantcarthew/node-rethinkdb-job-queue
-    summary: |
-      rethinkdb-job-queue is a persistent job or task queue backed by
-      RethinkDB. It has been built as an alternative to the many
-      queues available on NPM.
-    languages:
-      - Node.js
-    brokers:
-      - RethinkDB
-    setup:
-      - npm install --save rethinkdb-job-queue
-
   - name: Sidekiq
     homepage: http://sidekiq.org/
     summary: |
@@ -317,3 +327,33 @@ libraries:
       - Crystal
     brokers:
       - Redis
+    setup:
+      - |
+        echo >shards.yml <<EOF
+        dependencies:
+          sidekiq:
+            github: mperham/sidekiq.cr
+            branch: master
+        EOF
+      - shards update
+
+  - name: Toniq
+    homepage: https://github.com/joakimk/toniq
+    summary: |
+      Simple and reliable background job processing library for
+      Elixir.
+    languages:
+      - Elixir
+    brokers:
+      - Redis
+    setup:
+      - |
+        echo >mix.exs <<EOF
+        defp deps do
+          [
+            {:exredis, ">= 0.1.1"},
+            {:toniq, "~> 1.0"}
+          ]
+        end
+        EOF
+      - mix deps.get

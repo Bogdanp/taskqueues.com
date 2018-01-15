@@ -254,7 +254,7 @@
               {% if library.setup %}
                 <div class="terminal">
                   {% for line in library.setup %}
-                    <pre>{{ line }}</pre>
+                    <pre>{{ line|escape }}</pre>
                   {% endfor %}
                 </div>
               {% endif %}
