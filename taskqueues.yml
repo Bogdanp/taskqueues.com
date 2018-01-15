@@ -149,7 +149,7 @@ libraries:
     brokers:
       - Redis
     setup:
-      - gem 'delayed_job_active_record' >> Gemfile
+      - echo "gem 'delayed_job_active_record'" >> Gemfile
       - bundle install
 
   - name: Dramatiq
