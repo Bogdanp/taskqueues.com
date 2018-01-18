@@ -51,6 +51,12 @@ brokers:
       page views in high-volume web applications by running
       time-consuming tasks asynchronously.
 
+  - name: Bedrock::Jobs
+    homepage: http://bedrockdb.com/jobs.html
+    summary: |
+      Bedrock::Jobs is a plugin to the Bedrock data foundation that
+      manages a scheduled job queue.
+
   - name: Faktory
     homepage: http://contribsys.com/faktory/
     summary: |
