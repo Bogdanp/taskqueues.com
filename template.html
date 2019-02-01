@@ -343,12 +343,13 @@
       });
     </script>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54541558-8"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "UA-54541558-8");
+      (function(n, e, m, E, a, $) {
+        n[E]=n[E]||function(){(n[E].q=n[E].q||[]).push(arguments)};$=e.createElement(m);
+        $.id=E;$.src=a;$.async=1;m=e.getElementsByTagName(m)[0];m.parentNode.insertBefore($,m)
+      })(window, document, "script", "nemea", "https://taskqueues.nemea.co/track.js");
+
+      nemea("view");
     </script>
   </body>
 </html>
