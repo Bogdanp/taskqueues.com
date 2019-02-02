@@ -8,7 +8,7 @@ build: build/index.html
 
 .PHONY: deploy
 deploy: build
-	gcloud app deploy --project taskqueues-192117 app.yaml
+	scp build/* taskqueues@taskqueues.com:~/www/
 
 
 .PHONY: watch
