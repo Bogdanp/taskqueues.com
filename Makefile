@@ -8,7 +8,7 @@ build: build/index.html
 
 .PHONY: deploy
 deploy: build
-	scp build/* taskqueues@taskqueues.com:~/www/
+	scp build/* taskqueues:~/www/
 
 
 .PHONY: watch
