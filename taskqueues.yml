@@ -36,6 +36,12 @@ brokers:
       Apache RocketMQ™ is an open source distributed messaging and
       streaming data platform.
 
+  - name: Apache ActiveMQ
+    homepage: http://activemq.apache.org/
+    summary: |
+      Apache ActiveMQ™ is the most popular open source, multi-protocol,
+      Java-based messaging server.
+
   - name: Azure Service Bus
     homepage: https://azure.microsoft.com/en-us/services/service-bus/
     summary: |
