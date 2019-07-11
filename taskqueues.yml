@@ -10,6 +10,12 @@ brokers:
       reliability, and is best practice design for modern
       applications.
 
+  - name: Apache ActiveMQ
+    homepage: http://activemq.apache.org/
+    summary: |
+      Apache ActiveMQ™ is the most popular open source, multi-protocol,
+      Java-based messaging server.
+
   - name: Apache Kafka
     homepage: http://kafka.apache.org/
     summary: |
