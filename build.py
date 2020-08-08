@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import argparse
 import jinja2
 import sys
@@ -24,7 +24,7 @@ def parse_args():
 
 def main():
     arguments = parse_args()
-    config = yaml.load(arguments.config)
+    config = yaml.full_load(arguments.config)
     templates = jinja2.Environment(loader=jinja2.FileSystemLoader("."))
     template = templates.get_template("template.html")
     arguments.output.write(template.render(

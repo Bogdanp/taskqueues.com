@@ -129,6 +129,19 @@ brokers:
       points of failure, enabling fault tolerance and high
       availability coupled with a reliable message delivery guarantee.
 
+  - name: PostgreSQL
+    homepage: https://www.postgresql.org/
+    summary: |
+      While PostgreSQL is not a message queue per se, it does support
+      facilities for implementing queues via the "SELECT ... FOR
+      UPDATE SKIP LOCKED" clause and the notification
+      subsystem. Postgres-based message queues can be very convenient
+      if you're already using Postgres as your database and you don't
+      need too much throughput. Another advantage to Postgres is you
+      can enqueue jobs transactionally with other database operations,
+      causing related operations to be rolled back if a job can't be
+      enqueued.
+
   - name: RabbitMQ
     homepage: http://rabbitmq.com/
     summary: |
@@ -169,7 +182,7 @@ libraries:
       - RabbitMQ
       - Redis
     setup:
-      - pipenv install celery
+      - pip install celery
 
   - name: Delayed::Job
     homepage: https://github.com/collectiveidea/delayed_job
@@ -197,7 +210,7 @@ libraries:
       - RabbitMQ
       - Redis
     setup:
-      - pipenv install dramatiq
+      - pip install dramatiq
 
   - name: exq
     homepage: https://github.com/akira/exq
@@ -228,7 +241,19 @@ libraries:
     brokers:
       - Redis
     setup:
-      - pipenv install huey
+      - pip install huey
+
+  - name: koyo
+    homepage: https://koyoweb.org/job/index.html
+    summary: |
+      Koyo is a web-development toolkit for Racket that comes with a
+      built-in task queue based on PostgreSQL.
+    languages:
+      - Racket
+    brokers:
+      - PostgreSQL
+    setup:
+      - raco pkg install koyo
 
   - name: Kue
     homepage: http://automattic.github.io/kue/
@@ -339,7 +364,7 @@ libraries:
     brokers:
       - Redis
     setup:
-      - pipenv install rq
+      - pip install rq
 
   - name: Resque
     homepage: https://github.com/resque/resque
