@@ -413,6 +413,30 @@ libraries:
         EOF
       - shards update
 
+  - name: Temporal
+    homepage: https://github.com/temporalio/temporal
+    summary: |
+      Temporal has two major components: a stateful backend layer which
+      is powered by the database of your choice and a client-side 
+      framework in one of the supported languages. Applications are
+      built using a client-side framework and plain old code which
+      automatically persists state changes to the backend while your
+      code runs. You are free to use the same dependencies, libraries
+      and build chains that you would rely on when building any other
+      application. To be clear, the backend itself is highly distributed
+      so this isn't a J2EE 2.0 situation. In fact, the distributed nature
+      of the backend is exactly what enables nearly infinite horizontal scaling.
+      Temporal aims to provide consistency, simplicity and reliability for the
+      application layer just like Docker Kubernetes and serverless did for infrastructure. 
+    languages:
+      - Golang
+      - Java
+      - Ruby
+    setup:
+      - curl -L https://github.com/temporalio/temporal/releases/latest/download/docker.tar.gz | tar -xz
+      - cd docker
+      - docker-compose up
+
   - name: Toniq
     homepage: https://github.com/joakimk/toniq
     summary: |
