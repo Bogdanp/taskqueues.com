@@ -155,6 +155,14 @@ brokers:
     summary: |
       Redis is an open source (BSD licensed), in-memory data structure
       store, used as a database, cache and message broker.
+      
+  - name: Zeplo
+    homepage: https://zeplo.io
+    summary: |
+      Zeplo is a next generation message queue powered by HTTPS, 
+      no setup required. Supports delayed, scheduled and retry 
+      of messages. In-built console to debug and reprocess 
+      failed records. Infinitely scaleable.
 
 libraries:
   - name: Bee Queue
