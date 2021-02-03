@@ -459,3 +459,20 @@ libraries:
         end
         EOF
       - mix deps.get
+
+  - name: db-queue
+    homepage: https://github.com/yoomoney-tech/db-queue
+    summary: |
+      Db-queue provides a rich interface to database-backed
+      message queue (PostgreSQL, Oracle, MSSQL). Db-queue offers a rich set
+      of features and is designed to handle high throughput.
+      Db-queue assumes that you are already using relational databases
+      in your production environment and that adding another dependency is undesirable.
+    languages:
+      - Java
+    brokers:
+      - PostgreSQL
+      - Oracle
+      - MSSQL
+    setup:
+      https://bintray.com/yoomoney-tech/maven/db-queue/_latestVersion
