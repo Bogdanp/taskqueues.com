@@ -90,6 +90,17 @@ brokers:
       service that allows you to send and receive messages between
       independent applications.
 
+  - name: Inngest
+    homepage: https://www.inngest.com
+    summary: |
+      Inngest is an open source event-driven queue in which serverless
+      functions are triggered by HTTP events. Inngest does not require
+      one to configure queues up front and instead, systems can just
+      send events to start using in minutes. Inngest aims to be
+      SDK-less and use standard libraries and interfaces to provide a
+      better developer experience. Inngest can be self-hosted or one
+      can use Inngest's cloud platform offering.
+
   - name: IronMQ
     homepage: http://www.iron.io/mq
     summary: |
