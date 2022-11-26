@@ -102,6 +102,16 @@
       .card__content {}
       .card__content p { padding: 1rem; text-align: justify; }
 
+      .sponsor {
+        border-top: 1px solid #f9f9f9;
+        padding: 1rem;
+      }
+      .sponsor em {
+        color: #bbb;
+        font-style: normal;
+        font-weight: 300;
+      }
+
       .terminal {
         background: #000;
         border-radius: 0 0 4px 4px;
@@ -193,6 +203,16 @@
 
             <div class="card__content">
               <p>{{ broker.summary }}</p>
+
+              {% if broker.sponsor %}
+              <div class="sponsor">
+                <em>Sponsor:</em>
+                {{ broker.sponsor.who }} &mdash;
+                <a href="{{ broker.sponsor.link }}" target="_blank">
+                  {{ broker.sponsor.description }}
+                </a>
+              </div>
+              {% endif %}
 
               {% if broker.setup %}
                 <div class="terminal">

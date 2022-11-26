@@ -17,6 +17,11 @@ brokers:
       Java-based messaging server.
 
   - name: Apache Kafka
+    sponsor:
+      who: Franz
+      link: https://franz.defn.io
+      description: |
+        native macOS client for Apache Kafka.
     homepage: http://kafka.apache.org/
     summary: |
       Kafka® is used for building real-time data pipelines and
@@ -160,6 +165,18 @@ brokers:
       the cloud. It supports multiple messaging protocols. RabbitMQ
       can be deployed in distributed and federated configurations to
       meet high-scale, high-availability requirements.
+
+  - name: Red Panda
+    sponsor:
+      who: Franz
+      link: https://franz.defn.io
+      description: |
+        native macOS client for Kafka and Red Panda.
+    homepage: https://redpanda.com
+    summary: |
+      Redpanda is a Kafka®-compatible streaming data platform that is
+      up to 10x faster and 6x more hardware-efficient. It is also
+      JVM-free, ZooKeeper®-free, Jepsen-tested and source available.
 
   - name: Redis
     homepage: https://redis.io
