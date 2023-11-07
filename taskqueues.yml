@@ -274,6 +274,17 @@ libraries:
         end
         EOF
       - mix deps.get
+  
+  - name: faust
+    homepage: https://faust.readthedocs.io/en/latest/
+    summary: |
+      a stream processing library, porting the ideas from Kafka Streams to Python
+    languages:
+      - python
+    brokers:
+      - Kafka
+    setup:
+      - pip install faust
 
   - name: huey
     homepage: https://huey.readthedocs.io/en/latest/
