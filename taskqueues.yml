@@ -276,15 +276,15 @@ libraries:
       - mix deps.get
   
   - name: faust
-    homepage: https://faust.readthedocs.io/en/latest/
+    homepage: https://github.com/faust-streaming/faust
     summary: |
-      a stream processing library, porting the ideas from Kafka Streams to Python
+      A library for building streaming applications in Python.
     languages:
       - python
     brokers:
       - Kafka
     setup:
-      - pip install faust
+      - pip install faust-streaming
 
   - name: huey
     homepage: https://huey.readthedocs.io/en/latest/
