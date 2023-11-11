@@ -274,6 +274,17 @@ libraries:
         end
         EOF
       - mix deps.get
+  
+  - name: faust
+    homepage: https://github.com/faust-streaming/faust
+    summary: |
+      A library for building streaming applications in Python.
+    languages:
+      - python
+    brokers:
+      - Kafka
+    setup:
+      - pip install faust-streaming
 
   - name: huey
     homepage: https://huey.readthedocs.io/en/latest/
