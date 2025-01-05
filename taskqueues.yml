@@ -77,8 +77,6 @@ brokers:
       - Any language supporting HTTP requests
     brokers:
       - None (HTTP-based)
-    setup:
-      - Configure your app to send POST requests to Dispatched.dev and handle webhooks for task execution.
 
   - name: Faktory
     homepage: http://contribsys.com/faktory/
@@ -286,7 +284,7 @@ libraries:
         end
         EOF
       - mix deps.get
-  
+
   - name: faust
     homepage: https://github.com/faust-streaming/faust
     summary: |
