@@ -68,6 +68,18 @@ brokers:
       Bedrock::Jobs is a plugin to the Bedrock data foundation that
       manages a scheduled job queue.
 
+  - name: Dispatched
+    homepage: https://dispatched.dev
+    summary: |
+      A lightweight, developer-friendly background task runner built specifically for serverless applications.
+      It supports HTTP-based job dispatch and webhook notifications for task execution.
+    languages:
+      - Any language supporting HTTP requests
+    brokers:
+      - None (HTTP-based)
+    setup:
+      - Configure your app to send POST requests to Dispatched.dev and handle webhooks for task execution.
+
   - name: Faktory
     homepage: http://contribsys.com/faktory/
     summary: |
